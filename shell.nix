@@ -12,7 +12,7 @@ in
     packages = ps: with ps; [
       angr-pkgs.python37Packages.angr
     ];
-    python3WithAngr = python37.withPackages packages;
+    python37WithAngr = python37.withPackages packages;
 
   in stdenv.mkDerivation rec {
     name = "angr";

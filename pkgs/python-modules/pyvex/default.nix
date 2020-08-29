@@ -1,6 +1,7 @@
 { archinfo
 , bitstring
 , cffi
+, unicorn
 , buildPythonPackage
 , future
 , fetchPypi
@@ -19,7 +20,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "2cd2de1572e3252bc1165d9713960e5694fe87fa32aa8aa03eac818c22a8919c";
+    sha256 = "00wsvasz90kjdng0cff5fma5y3gjj674lf2sx2zzgpca4szgki6b";
   };
 
   # Very long tests.

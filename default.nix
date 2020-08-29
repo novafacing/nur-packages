@@ -37,7 +37,7 @@
 
     pyxbe = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pyxbe {};
 
-    pyvex = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pyvex { inherit archinfo; };
+    pyvex = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pyvex { inherit archinfo unicorn; };
 
     PySMT = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pysmt {};
 

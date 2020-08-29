@@ -15,13 +15,15 @@ buildPythonPackage rec {
     owner = "angr";
     repo = pname;
     rev = "b0262c8c14c17dedd6de547ef3c75168b05b8655";
-    sha256 = "1nsm1vhc8pk8kxdq0p0sgd19sgg0p8zfk6pcq0czds9i1hdhgca4";
+    sha256 = "0v83mmx6lmlxzfx2c7l3r0sljv946qfmbzk9923hkcrj5bhxwya7";
   };
 
-  checkInputs = [ nose nose2 ];
-  checkPhase = ''
-    nose2 -s tests/
-  '';
+  # these tests are probably fine but they rely on unicorn which we uh...don't have
+  # checkInputs = [ nose nose2 ];
+  # checkPhase = ''
+  #   nose2 -s tests/
+  # '';
+  doCheck = false;
 
   meta = with pkgs.lib; {
     description = "A collection of classes that contain architecture-specific information";
