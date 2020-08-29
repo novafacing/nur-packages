@@ -14,36 +14,36 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  python3Packages = rec {
-    ailment = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/ailment { inherit pyvex; };
+  python37Packages = rec {
+    ailment = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/ailment { inherit pyvex; };
 
-    angr = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/angr {
+    angr = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/angr {
       inherit archinfo ailment claripy cle cooldict mulpyplexer pyvex unicorn;
     };
 
-    archinfo = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/archinfo {};
+    archinfo = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/archinfo {};
 
-    claripy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/claripy { inherit PySMT z3-solver; };
+    claripy = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/claripy { inherit PySMT z3-solver; };
 
-    cle = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cle { inherit archinfo minidump pyelftools pyvex pyxbe; };
+    cle = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/cle { inherit archinfo minidump pyelftools pyvex pyxbe; };
 
-    cooldict = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cooldict {};
+    cooldict = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/cooldict {};
 
-    minidump = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/minidump {};
+    minidump = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/minidump {};
 
-    mulpyplexer = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/mulpyplexer {};
+    mulpyplexer = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/mulpyplexer {};
 
-    pyelftools = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyelftools {};
+    pyelftools = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pyelftools {};
 
-    pyxbe = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyxbe {};
+    pyxbe = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pyxbe {};
 
-    pyvex = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyvex { inherit archinfo; };
+    pyvex = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pyvex { inherit archinfo; };
 
-    PySMT = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pysmt {};
+    PySMT = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/pysmt {};
 
-    unicorn = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/unicorn {};
+    unicorn = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/unicorn {};
 
     # TODO: Remove once NixOS/nixpkgs#75125 is resolved: This is here for `claripy` to work.
-    z3-solver = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/z3-solver {};
+    z3-solver = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/z3-solver {};
   };
 }

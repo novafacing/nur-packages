@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ltfish";
     repo = pname;
-    rev = "609310dd46a78e98b39461ac1c23d4b2011a213b";
+    rev = "ea6f8d5e337f9c5b0b80e0a4d67bcb57aca8cf13";
     sha256 = "12zbvxyziad3qqjfvfv40azhdk8jkyc7y4b78immlrgha8sjrl2g";
   };
 

@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "archinfo";
-  version = "8.20.6.1";
+  version = "8.20.7.27";
   disabled = !isPy3k;
 
   src = fetchFromGitHub {
     owner = "angr";
     repo = pname;
-    rev = "ad017e5d782c6a7d23bfdbec4c7d73d6899565d5";
+    rev = "b0262c8c14c17dedd6de547ef3c75168b05b8655";
     sha256 = "1nsm1vhc8pk8kxdq0p0sgd19sgg0p8zfk6pcq0czds9i1hdhgca4";
   };
 

@@ -10,7 +10,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zardus";
     repo = pname;
-    rev = "32d56888b555f4513a0e41193bfa49e0e5497a7b";
+    rev = "f4eac5d4fbabbec452f45415615f64c6e3d71a35";
     sha256 = "1nwf2gd6mx9nm0s9bg0xd5a7b286ph0789fnadri5yd8qqfwr50i";
   };
 
