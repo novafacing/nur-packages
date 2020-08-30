@@ -18,12 +18,12 @@
     ailment = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/ailment { inherit pyvex; };
 
     angr = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/angr {
-      inherit archinfo ailment claripy cle cffi-114 cooldict mulpyplexer pyvex unicorn cppheaderparser;
+      inherit archinfo ailment claripy cle cooldict mulpyplexer pyvex unicorn cppheaderparser;
     };
 
     archinfo = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/archinfo {};
 
-    cffi-114 = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/cffi {};
+    # cffi-114 = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/cffi {};
 
     claripy = pkgs.python37.pkgs.callPackage ./pkgs/python-modules/claripy { inherit PySMT z3-solver; };
 

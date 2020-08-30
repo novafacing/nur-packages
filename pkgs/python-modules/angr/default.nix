@@ -5,7 +5,7 @@
 , capstone
 , claripy
 , cle
-, cffi-114
+, cffi
 , cooldict
 , dpkt
 , fetchFromGitHub
@@ -36,7 +36,7 @@ buildPythonPackage rec {
     archinfo
     cachetools
     capstone
-    cffi-114
+    cffi
     claripy
     cle
 	cooldict
@@ -67,14 +67,9 @@ buildPythonPackage rec {
     "--plat-name x86_64-linux"
   ];
 
-  checkPhase = ''
-    echo "***********************************************************************"
-    python3 -c 'import cffi; print(cffi.__version__)'
-    echo "***********************************************************************"
-  '';
 
   # Many tests are broken.
-  doCheck = true;
+  doCheck = false;
 
   # Verify imports still work.
   pythonImportsCheck = [ "angr" ];
