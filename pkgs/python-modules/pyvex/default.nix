@@ -12,7 +12,7 @@ buildPythonPackage rec {
   pname = "pyvex";
   version = "8.20.7.27";
 
-  propagatedBuildInputs = [ archinfo bitstring cffi future ];
+  propagatedBuildInputs = [ archinfo bitstring cffi future unicorn ];
 
   setupPyBuildFlags = [
     "--plat-name x86_64-linux"
