@@ -1,5 +1,4 @@
 { archinfo
-, cffi
 , buildPythonPackage
 , fetchFromGitHub
 , git
@@ -19,7 +18,7 @@ buildPythonPackage rec {
   pname = "cle";
   version = "8.20.7.27";
 
-  propagatedBuildInputs = [ archinfo cffi minidump pefile pyelftools pyvex pyxbe sortedcontainers unicorn ];
+  propagatedBuildInputs = [ archinfo pkgs.python37Packages.cffi minidump pefile pyelftools pyvex pyxbe sortedcontainers unicorn ];
 
   src = fetchFromGitHub {
     owner = "angr";

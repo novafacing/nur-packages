@@ -5,16 +5,16 @@
 
 buildPythonPackage rec {
   pname = "cffi";
-  version = "1.14.2";
+  version = "1.14.1";
 
   propagatedBuildInputs = [
-    pkgs.python37Packages.pycparser
     pkgs.libffi
+    pkgs.python37Packages.pycparser
   ];
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "06x95h9mpc1mnim685g65zrn7vfrqmgqnjwq6m01bhpj1bak93xf";
+    sha256 = "0bxxw0qhhav13khg9sbaypqqwxd2mvpvlm1105p18dm1fv9b18mj";
   };
 
   # No tests.
@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   meta = with pkgs.lib; {
     description = "Foreign Function Interface for Python calling C code.";
-    homepage = "https://pypi.org/project/cffi";
+    homepage = "https://pypi.org/project/cffi/";
     license = licenses.bsd2;
     maintainers = [ ];
   };
